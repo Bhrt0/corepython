@@ -306,3 +306,72 @@ calculator()
 # git add .
 # git commit -am"done"
 # git push
+
+# test print even numbers using while loop
+
+'''num = 0
+while (num<=100):
+    print(num)
+    num += 2
+'''
+
+'''T = input("enter anything: ")
+Y = T [::-1]
+if T == Y:
+    print("this is a palindrome!")
+else:print("this is not a palindrome")
+'''
+
+########## Variable arguments in a functions for auto_multiple variables
+
+'''def sumNum(a, *varg):
+    t = a
+    for n in varg:
+        t += n
+    return t
+
+total = sumNum(1,2,3,4,5,6)
+print("total", total)
+
+def my_fun(*argsh):
+    for arg in argsh:
+        print(arg)
+
+my_fun(1,2,'B',"bhrt")
+'''
+
+########## variable arguments with key and values dectionary style
+'''def my(**kward):
+    for key, value in kward.items():
+        print(f"{key}: {value}")
+
+
+my(a=1,b=2)
+
+n = input("enter your first name: ")
+s = input("enter your last name: ")
+
+my(Name=n, Lastname=s)
+'''
+
+'''def Double(*args, **kwargs):
+    for d in args:
+        print(d)
+    for key, value in kwargs.items():
+        print(f"{key}: {value}")
+
+Double(1,3,5,a=1,b=3)
+'''
+
+'''def Ne(**kwarf):
+    for key, value in kwarf.items():
+        print(f"{key}: {value}")  #F string use for messsage as well as variables do not need to use commas
+
+
+N = input("Enter your First name: ")
+S = input("Enter your Second name: ")
+
+
+Ne(Name=N, Surname=S)
+print("Welcome",N,S,"!")
+'''
