@@ -14,6 +14,8 @@ def divide(x, y):
     else:
         return x / y
 
+
+
 def calculator():
     print("Select Operation:")
     print("1 Add")
@@ -23,16 +25,22 @@ def calculator():
 
     choice = input("Enter your choice (1,2,3 or 4): ")
 
-    a = float(input("Enter First Value: "))
-    b = float(input("Enter Second Value: "))
 
     if choice == '1':
+        a = float(input("Enter First Value: "))
+        b = float(input("Enter Second Vlaue: "))
         print("Result: ", add(a, b))
     elif choice == '2':
+        a = float(input("Enter First Value: "))
+        b = float(input("Enter Second Value: "))
         print("Result: ", subtract(a, b))
     elif choice == '3':
+        a = float(input("Enter First Value: "))
+        b = float(input("Enter Second Value: "))
         print("Result: ", multiplication(a, b))
     elif choice == '4':
+        a = float(input("Enter Fisrt Value: "))
+        b = float(input("Enter Second Value: "))
         print("Result :", divide(a, b))
     else:
         print("Select the correct operation!")
