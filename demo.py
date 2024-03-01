@@ -702,3 +702,76 @@ print("CIrcle aree =",c.area())
 r = Reck("black",2,3)
 print(r.area())'''
 
+######## Polymorphism
+######## programming concept that allows for the same code to be used with different types of data. This can be achieved through method overriding or function overloading.
+
+#####normal area calculation using class
+'''class Rectangle:
+    def __init__(self,width, height):
+        self.wid = width
+        self.hig = height
+
+    def area(self):
+        return self.wid * self.hig
+
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return 3.14 * self.radius ** 2
+
+class Triangle:
+    def __init__(self, side1, side2, side3):
+        self.side1 = side1
+        self.side2 = side2
+        self.side3 = side3
+
+    def area(self):
+        s = (self.side1 + self.side2 + self.side3) / 2
+        return (s * (s - self.side1) * (s - self.side2) * (s - self.side3)) ** 0.5
+
+rectangle = Rectangle(4,6)
+circle = Circle(3)
+triangle = Triangle(3,4,5)
+
+print("Rectangle Area:", rectangle.area())
+print("Circle Area:", circle.area())
+print("Tirangle Area:", triangle.area())
+'''
+
+#### now we are using polymorphism
+
+'''class Shape:
+    def area(self):
+        pass
+
+class Rectangle(Shape):
+    def __init__(self,width, height):
+        self.wid = width
+        self.hig = height
+
+    def area(self):
+        return self.wid * self.hig
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return 3.14 * self.radius ** 2
+
+class Triangle(Shape):
+    def __init__(self, side1, side2, side3):
+        self.side1 = side1
+        self.side2 = side2
+        self.side3 = side3
+
+    def area(self):
+        s = (self.side1 + self.side2 + self.side3) / 2
+        return (s * (s - self.side1) * (s - self.side2) * (s - self.side3)) ** 0.5
+
+shapes = [Rectangle(3,5), Circle(3), Triangle(4,5,6)]
+
+for shape in shapes:
+    print("Area : ", shape.area())'''
